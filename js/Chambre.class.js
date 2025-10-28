@@ -7,7 +7,7 @@ export class Chambre {
   #reservation;
 
   // constructeur  avec les valeur qui contreuise la Chambre
-  constructor(capacite,superficie,reservation){
+  constructor(capacite,superficie,reservation = false){
     this.#setCapacite(capacite);
     this.#setSuperficie(superficie);
     this.setReservation(reservation);
@@ -32,7 +32,9 @@ export class Chambre {
   }
 
   setReservation(){
+    if (!reservation) throw new Error("ERR: Champs 'reservation' obligatoir"); 
 
+    this.#reservation;
   }
   // getter pour quand on veux récup les donner des attribue de chambre 
   getCapacite(){
@@ -60,5 +62,5 @@ export class Chambre {
   libereChambre(){
 
   }
-  
+
 }
