@@ -46,7 +46,7 @@ export class Chambre {
   }
 
   getReservation(){
-    return  this.#reservation;
+    return  this.#reservation
   }
   // methode suplémentaire 
   affiche(){
