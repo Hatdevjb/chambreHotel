@@ -13,7 +13,7 @@ class Chambre {
     }
     // setter  
     setCapacite(capacite) {
-        this.#capacite = capacité;
+        this.#capacite = capacite;
     }
 
     setSuperficie(superficie) {
