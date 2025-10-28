@@ -8,12 +8,12 @@
 
      // SCENARIOS ALTERNATIFS - TESTS
     try {
-        //let ch1 = new Chambre();
-        //let ch2 = new Chambre("toto");
-        //let ch3 = new Chambre(-10);
+        // let ch1 = new Chambre();
+        // let ch2 = new Chambre("titi","toto");
+        // let ch3 = new Chambre(-3,-10);
 
         // SCENARIO NOMINAL
-        let ch4 = new Chambre(10);
+        let ch4 = new Chambre(3,25);
 
         //console.log(ch4);
         ch4.affiche();

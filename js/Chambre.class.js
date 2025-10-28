@@ -2,17 +2,22 @@
 // classe à metre en export si utilisatuion de live
 export class Chambre {
     // Attribue qui constitue une chambre
-    #capacite;
+    #capacite = 0;
     #superficie = 0;
     #reservation;
     // constructeur  avec les valeur qui contreuise la Chambre
     constructor(capacite,superficie,reservation){
-      this.setCapacite(capacite);
+      this.#setCapacite(capacite);
       this.#setSuperficie(superficie);
       this.setReservation(reservation);
     }
     // setter  
-    setCapacite(capacite){
+    #setCapacite(capacite){
+      if (!capacite) throw new Error("ERR: Champs 'capacite' obligatoir");
+      if (isNaN(capacite)) throw new Error("ERR: Champs 'capacite'est un nombre");
+      if (capacite <= 0)  throw new Error("ERR: Champs 'capacite'est un nombre positif");
+
+
       this.#capacite = capacite;
     }
 
@@ -41,7 +46,9 @@ export class Chambre {
     }
     // methode suplémentaire 
     affiche(){
-        console.log("Ma superficie est de " + this.#superficie)
+        console.log("Ma superficie est de " + this.#superficie);
+        console.log("Ma capacite est de " + this.#capacite);
+        
     }
 
     reserverChambre(){
