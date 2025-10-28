@@ -8,7 +8,7 @@ export class Chambre {
     // constructeur  avec les valeur qui contreuise la Chambre
     constructor(capacite,superficie,reservation){
       this.setCapacite(capacite);
-      this.setSuperficie(superficie);
+      this.#setSuperficie(superficie);
       this.setReservation(reservation);
     }
     // setter  
